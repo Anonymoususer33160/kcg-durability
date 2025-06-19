@@ -17,102 +17,87 @@
   min-height: 100vh;
 }
 
-/* Let content grow to fill space */
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1119;
+  color: #fff;
+}
+
+/* HEADER */
+header {
+  background-color: #b00000;
+  padding: 1em;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header h2 {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-left: 5px solid #b00000;
+  border-radius: 4px;
+}
+
+/* MAIN CONTENT */
 .content {
   flex: 1;
   position: relative;
-  padding: 2em;
   max-width: 800px;
   margin: auto;
   border: 2px solid #b00000;
   border-radius: 8px;
-  color: #ffffff;
+  background-color: transparent;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* spacing between images */
+  padding: 20px;
+  color: black;
 }
+
 @media screen and (min-width: 768px) {
   .content {
     border: none;
   }
 }
-    
-/* Optional: Make footer look good */
-footer {
-  background-color: #000;
-  color: #aaa;
-  text-align: center;
-  padding: 1em;
-  font-size: 0.9em;
+
+.content > * {
+  position: relative;
+  z-index: 1;
 }
-    
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #1119;
-      color: #fff;
-    }
 
-    header {
-      background-color: #b00000;
-      padding: 1em;
-      text-align: center;
-    }
+/* BACKGROUND IMAGE BLOCKS */
+.bg-image {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
+/* Specific images */
+.bg-image.awesome {
+  background-image: url('awesome.png');
+}
 
-    header h2 {
-      background-color: #333333;
-      color: #fff;
-      padding: 0.5em 1em;
-      border-left: 5px solid #b00000; /* red accent */
-      border-radius: 4px;
-    }
+.bg-image.image1 {
+  background-image: url('image000000_1.png');
+}
 
-     .content {
-    position: relative;
-    padding: 2em;
-    max-width: 800px;
-    margin: auto;
-    border: 2px solid #b00000;
-    border-radius: 8px;
-    color: black;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* spacing between images */
-    padding: 20px;
-  }
-  
-  .bg-image {
-    width: 100%;
-    max-width: 600px; /* adjust based on how wide you want the images */
-    height: 300px; /* adjust to fit your images */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.1;
-  }
-  
-  /* Image-specific background references */
-  .bg-image.awesome {
-    background-image: url('awesome.png');
-  }
-  
-  .bg-image.image1 {
-    background-image: url('image000000_1.png');
-  }
+.bg-image.image2 {
+  background-image: url('image000002.png');
+}
 
-  .bg-image.image2 {
-    background-image: url('image000002.png');
-  }
-    
-    .content > * {
-      position: relative;
-      z-index: 1;
-    }
 
     footer {
       background-color: #000;
