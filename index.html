@@ -17,87 +17,87 @@
   min-height: 100vh;
 }
 
-    body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #1119;
-  color: #fff;
-}
-
-/* HEADER */
-header {
-  background-color: #b00000;
-  padding: 1em;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2em;
-}
-
-header h2 {
-  background-color: #333;
-  color: #fff;
-  padding: 0.5em 1em;
-  border-left: 5px solid #b00000;
-  border-radius: 4px;
-}
-
-/* MAIN CONTENT */
+/* Let content grow to fill space */
 .content {
   flex: 1;
   position: relative;
+  padding: 2em;
   max-width: 800px;
   margin: auto;
   border: 2px solid #b00000;
   border-radius: 8px;
-  background-color: transparent;
+  color: #ffffff;
   overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px; /* spacing between images */
-  padding: 20px;
-  color: black;
 }
-
 @media screen and (min-width: 768px) {
   .content {
     border: none;
   }
 }
-
-.content > * {
-  position: relative;
-  z-index: 1;
+    
+/* Optional: Make footer look good */
+footer {
+  background-color: #000;
+  color: #aaa;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
 }
+    
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1119;
+      color: #fff;
+    }
 
-/* BACKGROUND IMAGE BLOCKS */
-.bg-image {
-  width: 100%;
-  max-width: 600px;
-  height: 300px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.1;
-}
+    header {
+      background-color: #b00000;
+      padding: 1em;
+      text-align: center;
+    }
 
-/* Specific images */
-.bg-image.awesome {
-  background-image: url('awesome.png');
-}
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
 
-.bg-image.image1 {
-  background-image: url('image000000_1.png');
-}
+    header h2 {
+      background-color: #333333;
+      color: #fff;
+      padding: 0.5em 1em;
+      border-left: 5px solid #b00000; /* red accent */
+      border-radius: 4px;
+    }
 
-.bg-image.image2 {
-  background-image: url('image000002.png');
-}
-
+     .content {
+    position: relative;
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
+    border: 2px solid #b00000;
+    border-radius: 8px;
+    color: black;
+    overflow: hidden;
+  }
+  
+  .content::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('awesome.png'); /* Replace with your image URL */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 0;
+  }
+  
+  .content > * {
+    position: relative;
+    z-index: 1;
+  }
 
     footer {
       background-color: #000;
@@ -172,9 +172,9 @@ header h2 {
         We are a <strong>charitable lots-of-profit</strong> organization dedicated to providing thorough durability testing to all vehicles provided they go fast.
       </p></div>
          <br><hr style="height: 4px; background-color: #333; border: none;"><br>
-      <h2 style="color: black">Visit Us</h2>
-      <div>
-      <p style="font-size: 24px; text-align: left;">At your own risk.</p></div>
+      <h2 style="font-color: black">Visit Us</h2>
+      <div style="margin-left: 10px">
+       <p style="font-size: 24px">At your own risk.</p></div>
     </div>
   
     <footer>
